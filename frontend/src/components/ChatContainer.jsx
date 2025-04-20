@@ -9,7 +9,7 @@ const ChatContainer = () => {
     useChat();
 
   return (
-    <div className="flex flex-col h-screen max-w-5xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden">
+    <div className="flex flex-col h-screen max-w-5xl mx-auto bg-white shadow-xl rounded-xl overflow-hidden w-full">
       <ChatHeader onClearChat={clearChat} />
 
       <MessageList messages={messages} />

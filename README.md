@@ -1,6 +1,6 @@
-# AI Demo Project
+# AI Chat Demo
 
-A full-stack application with Python backend and React frontend for demonstrating AI capabilities.
+A full-stack AI Chat application with Python backend and React frontend
 
 ## Features
 

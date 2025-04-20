@@ -1,0 +1,43 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_API_BASE=${OPENAI_API_BASE}
+      - OPENAI_API_MODEL=${OPENAI_API_MODEL}
+      - API_PROVIDER=${API_PROVIDER}
+    volumes:
+      - ./backend:/app
+      - /app/__pycache__
+
+  frontend-dev:
+    build:
+      context: ./frontend
+      target: dev
+    ports:
+      - 5173:5173
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    working_dir: /app
+    environment:
+      - VITE_APP_API_URL=http://backend:8000/api
+    depends_on:
+      - backend
+
+  # frontend-prod:
+  #   build:
+  #     context: .
+  #     args:
+  #       BUILD_MODE: prod
+  #   ports:
+  #     - 80:80
+  #   environment:
+  #     - VITE_APP_API_URL=http://backend:8000/api
+  #   depends_on:
+  #     - backend

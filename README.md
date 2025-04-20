@@ -2,6 +2,10 @@
 
 A full-stack AI Chat application with Python backend and React frontend
 
+
+![image](https://github.com/user-attachments/assets/b016c4df-74c2-4d54-b7f7-5c562cdd7f58)
+
+
 ## Features
 
 - Interactive chat interface

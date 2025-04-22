@@ -21,5 +21,6 @@ export default defineConfig({
       protocol: 'ws',
       host: 'localhost'
     }
+    
   }
 });

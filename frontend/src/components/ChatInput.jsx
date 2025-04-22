@@ -36,7 +36,7 @@ const ChatInput = ({ onSendMessage, isLoading, onCancel }) => {
   };
 
   return (
-    <div className="border-t border-gray-200 bg-white p-4 md:p-6">
+    <div className="border-t border-gray-200 bg-white p-4 md:p-6 select-none">
       <form onSubmit={handleSubmit} className="relative max-w-4xl mx-auto">
         <textarea
           ref={textareaRef}
@@ -49,7 +49,7 @@ const ChatInput = ({ onSendMessage, isLoading, onCancel }) => {
           rows={1}
         />
 
-        <div className="absolute right-3 bottom-2.5">
+        <div className="absolute right-3 bottom-4">
           {isLoading ? (
             <button
               type="button"
